@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "6f74d285-2b8c-4634-ad68-f40bef0ee75c",
+		"name": "Rewe at home task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13569472"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"topic\": \"Important: Meeting Agenda\",\n  \"content\": \"Dear All,\\n\\nPlease find the attached meeting agenda for tomorrow's staff meeting. Let me know if you want any topics added.\\n\\nBest,\\n[Your Name]\",\n  \"sender\": \"your.email@yahoo.com\",\n  \"recipients\": [\n    \"recipient1@example.com\",\n    \"recipient2@example.com\",\n    \"recipient3@example.com\"\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/email/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"email",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "start",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/email/schedule/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"email",
+						"schedule",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get stat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/v1/statistics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"statistics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/email/schedule/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"email",
+						"schedule",
+						"start"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
